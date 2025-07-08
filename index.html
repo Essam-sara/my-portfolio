@@ -224,20 +224,6 @@
             });
         });
 
-        // Rotating Image
-        gsap.to('.rotate', {
-            rotation: 360,
-            duration: 20,
-            repeat: -1,
-            ease: 'linear',
-            transformOrigin: 'center center'
-        });
-        $('.rotate').tilt({
-            maxTilt: 10,
-            perspective: 1000,
-            scale: 1.1
-        });
-
         // Mouse Trail
         const canvas = document.createElement('canvas');
         document.body.appendChild(canvas);
