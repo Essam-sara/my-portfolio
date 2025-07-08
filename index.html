@@ -6,46 +6,51 @@
     <title>Sara Essam Youssef - Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="particles-js" class="particles-container"></div>
     <header>
-        <div class="animated-code-icon">&lt;<span>/</span>&gt;</div>
-        <img src="images/sara.jpg" alt="Sara Essam" class="profile-img fade-in-on-scroll">
-        <h1 class="fade-in-on-scroll">Sara Essam Youssef</h1>
+        <div class="animated-code-icon"><<span>/</span>></div>
+        <img src="images/sara.jpg" alt="Sara Essam" class="profile-img parallax">
+        <h1 class="stagger">Sara Essam Youssef</h1>
         <div class="dna-container">
             <div class="dna">
                 <span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
             </div>
         </div>
-        <p class="badge-top fade-in-on-scroll">
+        <p class="badge-top stagger">
             🥈 Ranked 3rd in Bioinformatics Department & 4th in the Faculty.<br>
             🧬 Key contributor to <strong>Bio Nat</strong> platform.
         </p>
-        <h2 class="fade-in-on-scroll">Full Stack Developer (PHP) at IT Genesis</h2>
-        <p class="fade-in-on-scroll">
+        <h2 class="stagger">Full Stack Developer (PHP) at IT Genesis</h2>
+        <p class="stagger">
             ITI Graduate, Faculty of Science, Port Said University.<br>
             Mathematics & Computer Science Department - Bioinformatics and Computing Program.
         </p>
-        <div class="social-links fade-in-on-scroll">
-            <a href="https://github.com/Essam-sara" target="_blank">GitHub</a>
-            <!-- Add your LinkedIn or other social links here -->
+        <div class="social-links stagger">
+            <a href="https://github.com/Essam-sara" target="_blank" class="ripple">GitHub</a>
         </div>
     </header>
 
     <main>
-        <section class="about fade-in-on-scroll">
-            <h2>About Me</h2>
-            <p>
+        <section class="about">
+            <h2 class="stagger">About Me</h2>
+            <p class="stagger">
                 I'm a passionate Full Stack Developer at IT Genesis with experience in web, desktop, cloud-based solutions, and AI tools.
                 I work on developing and maintaining Nextcloud server and desktop application, enabling secure cloud storage and file synchronization for remote teams.
                 I graduated from ITI and hold a degree in Mathematics and Computer Science. I love building creative web solutions, collaborating on real-world projects, and using the latest technologies to boost productivity.
             </p>
         </section>
 
-        <section class="skills fade-in-on-scroll">
-            <h2>Skills</h2>
-            <ul class="row">
+        <section class="skills">
+            <h2 class="stagger">Skills</h2>
+            <ul class="row stagger">
                 <li class="col-md-4">PHP</li>
                 <li class="col-md-4">Laravel</li>
                 <li class="col-md-4">Node.js</li>
@@ -74,43 +79,42 @@
             </ul>
         </section>
 
-        <section class="projects fade-in-on-scroll">
-            <h2>Projects</h2>
-            <div class="row g-4">
+        <section class="projects">
+            <h2 class="stagger">Projects</h2>
+            <div class="row g-4 stagger">
                 <div class="col-md-6">
-                    <div class="card shadow-sm project-card">
+                    <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
                             <h5 class="card-title">Bio Nat Platform</h5>
                             <p class="card-text">A leading bioinformatics platform for scientific research and analysis. Key team member & developer in a multi-disciplinary team.</p>
-                            <a href="https://bio-nat.com" class="btn btn-outline-pink" target="_blank">Visit Bio Nat</a>
+                            <a href="https://bio-nat.com" class="btn btn-outline-pink ripple" target="_blank">Visit Bio Nat</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card shadow-sm project-card">
+                    <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
                             <h5 class="card-title">Freelance Platform Website</h5>
                             <p class="card-text">A PHP-based freelance services platform with a custom admin panel and secure login.</p>
-                            <a href="https://github.com/Essam-sara/your-project-link" class="btn btn-outline-pink" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/Essam-sara/your-project-link" class="btn btn-outline-pink ripple" target="_blank">View on GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card shadow-sm project-card">
+                    <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Website</h5>
                             <p class="card-text">Modern responsive portfolio to showcase skills and projects (HTML, CSS, JS).</p>
-                            <a href="https://essam-sara.github.io/my-portfolio/" class="btn btn-outline-pink" target="_blank">Live Demo</a>
+                            <a href="https://essam-sara.github.io/my-portfolio/" class="btn btn-outline-pink ripple" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more projects here -->
             </div>
         </section>
 
-        <section class="experience fade-in-on-scroll">
-            <h2>Experience</h2>
-            <ul>
+        <section class="experience">
+            <h2 class="stagger">Experience</h2>
+            <ul class="stagger">
                 <li>
                     <strong>Nextcloud Server & Desktop Application - IT Genesis</strong><br>
                     <span>
@@ -121,53 +125,146 @@
             </ul>
         </section>
 
-        <section class="ai-tools fade-in-on-scroll">
-            <h2>AI Tools Experience</h2>
-            <ul>
+        <section class="ai-tools">
+            <h2 class="stagger">AI Tools Experience</h2>
+            <ul class="stagger">
                 <li>Expert in prompt engineering for ChatGPT and other AI models</li>
                 <li>Automating workflows and boosting productivity using AI</li>
                 <li>Experience with Midjourney (image generation), Copilot (code suggestions), and more</li>
             </ul>
         </section>
 
-        <section class="contact fade-in-on-scroll">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:saraessam2580@gmail.com">saraessam2580@gmail.com</a></p>
+        <section class="contact">
+            <h2 class="stagger">Contact</h2>
+            <p class="stagger">Email: <a href="mailto:saraessam2580@gmail.com">saraessam2580@gmail.com</a></p>
         </section>
     </main>
 
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="backToTopBtn" title="Go to top">↑</button>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="backToTopBtn" class="ripple" title="Go to top">↑</button>
 
     <footer>
-        &copy; 2025 Sara Essam Youssef. All rights reserved.
+        © 2025 Sara Essam Youssef. All rights reserved.
     </footer>
 
-    <!-- Bootstrap JS (optional) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Fade-in Scroll & Back to Top -->
+    <!-- Tilt.js for 3D Card Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <!-- Custom JS -->
     <script>
-    // Fade-in Animation on Scroll
-    document.addEventListener("DOMContentLoaded", function(){
-      var elements = document.querySelectorAll('.fade-in-on-scroll');
-      function checkVisible() {
-        elements.forEach(function(el){
-          var rect = el.getBoundingClientRect();
-          if(rect.top < window.innerHeight-100) el.classList.add('visible');
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#00aaff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#00aaff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
         });
-      }
-      window.addEventListener('scroll', checkVisible);
-      checkVisible();
-    });
 
-    // Back to Top Button
-    window.onscroll = function() {
-        var btn = document.getElementById("backToTopBtn");
-        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
+        // GSAP Scroll Animations
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('.stagger').forEach((el, index) => {
+            gsap.from(el, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: index * 0.2,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: el, start: 'top 80%' }
+            });
+        });
+
+        // Parallax Effect
+        gsap.to('.parallax', {
+            y: 100,
+            ease: 'none',
+            scrollTrigger: { trigger: 'header', scrub: true }
+        });
+
+        // Mouse Trail
+        const canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.pointerEvents = 'none';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const ctx = canvas.getContext('2d');
+        const trails = [];
+        window.addEventListener('mousemove', (e) => {
+            trails.push({ x: e.clientX, y: e.clientY, age: 0 });
+        });
+        function animateTrail() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            trails.forEach((trail, index) => {
+                trail.age += 0.02;
+                if (trail.age > 1) trails.splice(index, 1);
+                ctx.beginPath();
+                ctx.arc(trail.x, trail.y, 5 * (1 - trail.age), 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0, 170, 255, ${1 - trail.age})`;
+                ctx.fill();
+            });
+            requestAnimationFrame(animateTrail);
         }
-    };
+        animateTrail();
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Ripple Effect
+        document.querySelectorAll('.ripple').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const ripple = document.createElement('span');
+                const rect = btn.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                btn.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Tilt.js for Cards
+        $('.tilt').tilt({
+            maxTilt: 15,
+            perspective: 1000,
+            scale: 1.05
+        });
+
+        // Back to Top Button
+        window.onscroll = function() {
+            const btn = document.getElementById('backToTopBtn');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
     </script>
+    <style>
+        @keyframes ripple {
+            to { transform: scale(4); opacity: 0; }
+        }
+    </style>
 </body>
 </html>
