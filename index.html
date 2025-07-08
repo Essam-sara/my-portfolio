@@ -13,13 +13,17 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Typed.js for Typing Effect -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Three.js for 3D Effects (Optional for Image) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="particles-js" class="particles-container"></div>
     <header>
         <div class="animated-code-icon"><<span>/</span>></div>
-        <img src="images/sara.jpg" alt="Sara Essam" class="profile-img parallax">
+        <div class="image-container">
+            <img src="images/sara.jpg" alt="Sara Essam" class="profile-img rotate parallax">
+        </div>
         <h1 class="typing-effect stagger"></h1>
         <div class="dna-container">
             <div class="dna">
@@ -44,9 +48,7 @@
         <section class="about">
             <h2 class="stagger">About Me</h2>
             <p class="stagger">
-                I'm a passionate Full Stack Developer at IT Genesis with experience in web, desktop, cloud-based solutions, and AI tools.
-                I work on developing and maintaining Nextcloud server and desktop application, enabling secure cloud storage and file synchronization for remote teams.
-                I graduated from ITI and hold a degree in Mathematics and Computer Science. I love building creative web solutions, collaborating on real-world projects, and using the latest technologies to boost productivity.
+                I'm a passionate Full Stack Developer at IT Genesis with expertise in web, desktop, and cloud-based solutions, plus AI tools. I specialize in developing and maintaining Nextcloud server and desktop applications, enhancing remote work and collaboration. Graduated from ITI with a degree in Mathematics and Computer Science, I thrive on building innovative web solutions and leveraging cutting-edge technologies.
             </p>
         </section>
 
@@ -101,7 +103,7 @@
             <h2 class="stagger">AI & Design</h2>
             <ul class="row stagger">
                 <li class="col-md-4">UI/UX Design</li>
-                <li class="col-md-4">AI Tools (Prompt Engineering: ChatGPT, Copilot, Midjourney, etc.)</li>
+                <li class="col-md-4">AI Tools (Prompt Engineering: ChatGPT, Copilot, Midjourney)</li>
             </ul>
         </section>
 
@@ -112,16 +114,16 @@
                     <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
                             <h5 class="card-title">Bio Nat Platform</h5>
-                            <p class="card-text">A leading bioinformatics platform for scientific research and analysis. Key team member & developer in a multi-disciplinary team.</p>
-                            <a href="https://bio-nat.com" class="btn btn-outline-pink ripple" target="_blank">Visit Bio Nat</a>
+                            <p class="card-text">A bioinformatics platform for scientific research and analysis, developed as a key team member.</p>
+                            <a href="https://bio-nat.com" class="btn btn-outline-pink ripple" target="_blank">Visit</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
-                            <h5 class="card-title">Freelance Platform Website</h5>
-                            <p class="card-text">A PHP-based freelance services platform with a custom admin panel and secure login.</p>
+                            <h5 class="card-title">Freelance Platform</h5>
+                            <p class="card-text">A PHP-based platform with secure login and custom admin panel.</p>
                             <a href="https://github.com/Essam-sara/your-project-link" class="btn btn-outline-pink ripple" target="_blank">View on GitHub</a>
                         </div>
                     </div>
@@ -130,7 +132,7 @@
                     <div class="card shadow-sm project-card tilt">
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Website</h5>
-                            <p class="card-text">Modern responsive portfolio to showcase skills and projects (HTML, CSS, JS).</p>
+                            <p class="card-text">Modern responsive portfolio showcasing skills (HTML, CSS, JS).</p>
                             <a href="https://essam-sara.github.io/my-portfolio/" class="btn btn-outline-pink ripple" target="_blank">Live Demo</a>
                         </div>
                     </div>
@@ -142,21 +144,17 @@
             <h2 class="stagger">Experience</h2>
             <ul class="stagger">
                 <li>
-                    <strong>Nextcloud Server & Desktop Application - IT Genesis</strong><br>
+                    <strong>Nextcloud Server & Desktop - IT Genesis</strong><br>
                     <span>
-                        Developed and maintained customized Nextcloud server and desktop solutions for IT Genesis.
-                        Responsibilities included deploying servers, configuring synchronization and backup features, and improving user experience for remote work and collaboration across the company.
+                        Customized and maintained Nextcloud solutions, handling deployment, configuration, synchronization, and backup for remote collaboration.
                     </span>
                 </li>
-            </ul>
-        </section>
-
-        <section class="ai-tools">
-            <h2 class="stagger">AI Tools Experience</h2>
-            <ul class="stagger">
-                <li>Expert in prompt engineering for ChatGPT and other AI models</li>
-                <li>Automating workflows and boosting productivity using AI</li>
-                <li>Experience with Midjourney (image generation), Copilot (code suggestions), and more</li>
+                <li>
+                    <strong>AI Tools Expertise</strong><br>
+                    <span>
+                        Proficient in prompt engineering with ChatGPT, Copilot, and Midjourney, automating workflows and enhancing productivity.
+                    </span>
+                </li>
             </ul>
         </section>
 
@@ -181,18 +179,18 @@
         // Particles.js Initialization
         particlesJS('particles-js', {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
+                number: { value: 120, density: { enable: true, value_area: 800 } },
                 color: { value: '#00aaff' },
                 shape: { type: 'circle' },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: '#00aaff', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false }
+                opacity: { value: 0.6, random: true },
+                size: { value: 4, random: true },
+                line_linked: { enable: true, distance: 150, color: '#00aaff', opacity: 0.5, width: 1 },
+                move: { enable: true, speed: 8, direction: 'none', random: true, straight: false, attract: { enable: true, rotateX: 600, rotateY: 1200 } }
             },
             interactivity: {
                 detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+                events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { grab: { distance: 200, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } }
             },
             retina_detect: true
         });
@@ -202,19 +200,42 @@
         document.querySelectorAll('.stagger').forEach((el, index) => {
             gsap.from(el, {
                 opacity: 0,
-                y: 50,
-                duration: 1,
-                delay: index * 0.2,
+                y: 60,
+                duration: 1.2,
+                delay: index * 0.25,
                 ease: 'power3.out',
                 scrollTrigger: { trigger: el, start: 'top 80%' }
             });
         });
 
-        // Parallax Effect
+        // Parallax & Wave Effect
         gsap.to('.parallax', {
-            y: 100,
+            y: 120,
             ease: 'none',
-            scrollTrigger: { trigger: 'header', scrub: true }
+            scrollTrigger: { trigger: 'header', scrub: 1.5 }
+        });
+        gsap.utils.toArray('main section').forEach(section => {
+            gsap.from(section, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                ease: 'elastic.out(1, 0.3)',
+                scrollTrigger: { trigger: section, start: 'top 85%' }
+            });
+        });
+
+        // Rotating Image
+        gsap.to('.rotate', {
+            rotation: 360,
+            duration: 20,
+            repeat: -1,
+            ease: 'linear',
+            transformOrigin: 'center center'
+        });
+        $('.rotate').tilt({
+            maxTilt: 10,
+            perspective: 1000,
+            scale: 1.1
         });
 
         // Mouse Trail
@@ -234,11 +255,11 @@
         function animateTrail() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             trails.forEach((trail, index) => {
-                trail.age += 0.02;
-                if (trail.age > 1) trails.splice(index, 1);
+                trail.age += 0.03;
+                if (trail.age > 1.5) trails.splice(index, 1);
                 ctx.beginPath();
-                ctx.arc(trail.x, trail.y, 5 * (1 - trail.age), 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(0, 170, 255, ${1 - trail.age})`;
+                ctx.arc(trail.x, trail.y, 6 * (1 - trail.age), 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0, 170, 255, ${0.8 - trail.age})`;
                 ctx.fill();
             });
             requestAnimationFrame(animateTrail);
@@ -254,7 +275,7 @@
             btn.addEventListener('click', (e) => {
                 const ripple = document.createElement('span');
                 const rect = btn.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
+                const size = Math.max(rect.width, rect.height) * 1.5;
                 const x = e.clientX - rect.left - size / 2;
                 const y = e.clientY - rect.top - size / 2;
                 ripple.style.width = ripple.style.height = `${size}px`;
@@ -262,11 +283,11 @@
                 ripple.style.top = `${y}px`;
                 ripple.style.position = 'absolute';
                 ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.background = 'rgba(0, 170, 255, 0.4)';
                 ripple.style.transform = 'scale(0)';
-                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.animation = 'ripple 0.8s linear';
                 btn.appendChild(ripple);
-                setTimeout(() => ripple.remove(), 600);
+                setTimeout(() => ripple.remove(), 800);
             });
         });
 
@@ -279,10 +300,22 @@
 
         // Typing Effect
         new Typed('.typing-effect', {
-            strings: ['Sara Essam Youssef'],
-            typeSpeed: 50,
-            showCursor: false,
-            onComplete: () => gsap.from('.typing-effect', { opacity: 0, y: 20, duration: 1 })
+            strings: ['Sara Essam Youssef', 'Full Stack Developer'],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+
+        // Floating Elements
+        gsap.to('.stagger', {
+            y: '+=10',
+            yoyo: true,
+            repeat: -1,
+            ease: 'power1.inOut',
+            duration: 3,
+            stagger: 0.2
         });
 
         // Back to Top Button
@@ -298,6 +331,10 @@
     <style>
         @keyframes ripple {
             to { transform: scale(4); opacity: 0; }
+        }
+        .image-container {
+            perspective: 1000px;
+            display: inline-block;
         }
     </style>
 </body>
