@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Typed.js for Typing Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
     <header>
         <div class="animated-code-icon"><<span>/</span>></div>
         <img src="images/sara.jpg" alt="Sara Essam" class="profile-img parallax">
-        <h1 class="stagger">Sara Essam Youssef</h1>
+        <h1 class="typing-effect stagger"></h1>
         <div class="dna-container">
             <div class="dna">
                 <span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
@@ -48,33 +50,57 @@
             </p>
         </section>
 
-        <section class="skills">
-            <h2 class="stagger">Skills</h2>
+        <section class="skills-core">
+            <h2 class="stagger">Core Skills</h2>
             <ul class="row stagger">
                 <li class="col-md-4">PHP</li>
                 <li class="col-md-4">Laravel</li>
-                <li class="col-md-4">Node.js</li>
                 <li class="col-md-4">JavaScript</li>
+                <li class="col-md-4">HTML5</li>
+                <li class="col-md-4">CSS3</li>
+            </ul>
+        </section>
+
+        <section class="skills-frontend">
+            <h2 class="stagger">Frontend Skills</h2>
+            <ul class="row stagger">
+                <li class="col-md-4">Node.js</li>
                 <li class="col-md-4">TypeScript</li>
                 <li class="col-md-4">Angular</li>
                 <li class="col-md-4">Vue.js</li>
-                <li class="col-md-4">HTML5</li>
-                <li class="col-md-4">CSS3</li>
                 <li class="col-md-4">Bootstrap</li>
                 <li class="col-md-4">jQuery</li>
-                <li class="col-md-4">C++</li>
-                <li class="col-md-4">Desktop Application Development</li>
-                <li class="col-md-4">QT Framework</li>
-                <li class="col-md-4">Python</li>
-                <li class="col-md-4">UI/UX Design</li>
+            </ul>
+        </section>
+
+        <section class="skills-backend">
+            <h2 class="stagger">Backend & Database</h2>
+            <ul class="row stagger">
                 <li class="col-md-4">SQL</li>
                 <li class="col-md-4">MongoDB</li>
                 <li class="col-md-4">MariaDB</li>
                 <li class="col-md-4">WordPress</li>
+            </ul>
+        </section>
+
+        <section class="skills-other">
+            <h2 class="stagger">Other Technologies</h2>
+            <ul class="row stagger">
+                <li class="col-md-4">C++</li>
+                <li class="col-md-4">Desktop Application Development</li>
+                <li class="col-md-4">QT Framework</li>
+                <li class="col-md-4">Python</li>
                 <li class="col-md-4">Docker</li>
                 <li class="col-md-4">Nextcloud Server & Desktop</li>
                 <li class="col-md-4">Cloud Storage Solutions</li>
                 <li class="col-md-4">DevOps Basics</li>
+            </ul>
+        </section>
+
+        <section class="skills-ai">
+            <h2 class="stagger">AI & Design</h2>
+            <ul class="row stagger">
+                <li class="col-md-4">UI/UX Design</li>
                 <li class="col-md-4">AI Tools (Prompt Engineering: ChatGPT, Copilot, Midjourney, etc.)</li>
             </ul>
         </section>
@@ -249,6 +275,14 @@
             maxTilt: 15,
             perspective: 1000,
             scale: 1.05
+        });
+
+        // Typing Effect
+        new Typed('.typing-effect', {
+            strings: ['Sara Essam Youssef'],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: () => gsap.from('.typing-effect', { opacity: 0, y: 20, duration: 1 })
         });
 
         // Back to Top Button
