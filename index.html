@@ -327,6 +327,77 @@
                 btn.style.display = 'none';
             }
         };
+// Particles.js
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 120, density: { enable: true, value_area: 800 } },
+        color: { value: '#00aaff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.6, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 150, color: '#00aaff', opacity: 0.5, width: 1 },
+        move: { enable: true, speed: 8, direction: 'none', random: true, straight: false, attract: { enable: true, rotateX: 600, rotateY: 1200 } }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 200, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } }
+    },
+    retina_detect: true
+});
+
+// موجة SVG متحركة تحت الهيدر
+gsap.to("#animatedWave", {
+    attr: { d: "M0,60 Q360,120 720,60 T1440,60 V120 H0 Z" },
+    repeat: -1,
+    yoyo: true,
+    duration: 3.2,
+    ease: "power1.inOut"
+});
+
+// SVG border animation
+gsap.fromTo("#profileBorder", { strokeDasharray: 700, strokeDashoffset: 700 },
+    { strokeDashoffset: 0, duration: 2, ease: "power2.inOut", delay: 0.6 });
+
+// Reveal effect on all elements with .text-reveal
+document.querySelectorAll('.text-reveal').forEach((el, i) => {
+    gsap.to(el, {
+        scrollTrigger: { trigger: el, start: "top 85%" },
+        opacity: 1,
+        y: 0,
+        delay: 0.1 + i * 0.07,
+        duration: 1.1,
+        onStart: () => el.classList.add("visible")
+    });
+});
+
+// Tilt.js for Cards
+$('.tilt').tilt({
+    maxTilt: 15,
+    perspective: 1000,
+    scale: 1.05
+});
+
+// Typing Effect (glitch stays, typing only for effect if you want)
+new Typed('.typing-effect', {
+    strings: ['Sara Essam Youssef', 'Full Stack Developer'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
+});
+
+// Back to Top Button
+window.onscroll = function() {
+    const btn = document.getElementById('backToTopBtn');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = 'block';
+    } else {
+        btn.style.display = 'none';
+    }
+};
+
     </script>
     <style>
         @keyframes ripple {
